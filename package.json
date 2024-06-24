@@ -1,0 +1,23 @@
+{
+  "name": "nothing",
+  "version": "1.0.0",
+  "description": "this is the professional setup for the website ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "no"
+  },
+  "keywords": [
+    "code",
+    "and",
+    "fun",
+    "with",
+    "sahil"
+  ],
+  "author": "sahil raj srivastava",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.4.3"
+  }
+}
