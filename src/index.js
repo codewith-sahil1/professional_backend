@@ -7,8 +7,7 @@ const app = express();
 (async () => {
   try {
     await mongoose.connect(`${process.env.MONGODB_URL}/${DB_NAME}`, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
+   
     });
     console.log("Connected to MongoDB");
 
