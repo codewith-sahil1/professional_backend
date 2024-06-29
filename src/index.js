@@ -1,5 +1,70 @@
+// require('dotenv').config({path: './env'}) // this will also works fine but still not matching the syntax of the "import and require" that is why we are moving to the new approach. 
+import dotenv from "dotenv";
 import mongoose from "mongoose";
-import { DB_NAME } from "./constants";
+import { DB_NAME } from "./constants.js";
+import ConnectDB from "./DB/index.js";
+import express from "./app.js";
+
+
+dotenv.config({
+  path:'./env',
+})
+
+ConnectDB()
+express();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 
 // this is the first approach of connecting the database here it is in the index.js but we are taking a better and more professional approach >> where we are writing all the lines of code of connecting the database with another file and folder and only we will export to here....
