@@ -1,11 +1,27 @@
-const express = require('express')
-const app = express()
-const port = 3000
+import mongoose from "mongoose";
+import { DB_NAME } from "./constants";
+import express from "express";
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+const app = express();
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+(async () => {
+  try {
+    await mongoose.connect(`${process.env.MONGODB_URL}/${DB_NAME}`, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    });
+    console.log("Connected to MongoDB");
+
+    app.listen(process.env.PORT, () => {
+      console.log(`App is listening on port ${process.env.PORT}`);
+    });
+  } catch (error) {
+    console.log("Error: ", error);
+    throw error;
+  }
+})();
+
+app.on("error", (error) => {
+  console.log("ERROR", error);
+  throw error;
+});
