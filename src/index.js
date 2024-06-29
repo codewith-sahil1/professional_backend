@@ -1,5 +1,9 @@
 import mongoose from "mongoose";
 import { DB_NAME } from "./constants";
+/*
+
+// this is the first approach of connecting the database here it is in the index.js but we are taking a better and more professional approach >> where we are writing all the lines of code of connecting the database with another file and folder and only we will export to here....
+
 import express from "express";
 
 const app = express();
@@ -24,3 +28,8 @@ app.on("error", (error) => {
   console.log("ERROR", error);
   throw error;
 });
+
+*/
+
+
+
