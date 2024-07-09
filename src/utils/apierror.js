@@ -16,8 +16,8 @@ class ApiError extends Error {
         // own task just read about some points about " this.data field"
 
 
-        if (statck) {
-            this.statck = statck
+        if (stack) {
+            this.stack = stack
         }
         else {
             Error.captureStackTrace(this, this.constructor)
